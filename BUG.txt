@@ -1,0 +1,7 @@
+UseCard.kt and CardInterface.kt have vulnerability of following:
+Line 36-38, it check it token but the token is not necessary belong to the card owner. 
+So the attacker can use the token from someone else or by doing brute force attack to 
+acquire the token. In order to fix the bug, basically to assign user a random validation 
+value. Therefore, by validating the random validation value that is indeed belong to the 
+token owner. If the random validation value is invalid then the server will not return 
+the card message
