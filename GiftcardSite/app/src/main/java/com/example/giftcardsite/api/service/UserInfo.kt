@@ -9,5 +9,5 @@ import retrofit2.http.POST
 
 interface UserInfo {
     @POST("/api/metrics")
-    fun postInfo(@Body info: UserInfoContainer, @Header("Authorization") token: String?) : Call<User>
+    fun postInfo(@Body info:UserInfoContainer,@Header("Authorization") token:String?) : Call<User>
 }
