@@ -19,7 +19,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        cache: gradlew
+        cache: gradle
     - name: path
       run: |
         cd GiftcardSite/
