@@ -20,7 +20,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-    - run: cd GiftcardSite
+    - name: path
+      run: cd GiftcardSite/
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
