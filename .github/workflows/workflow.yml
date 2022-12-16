@@ -25,4 +25,4 @@ jobs:
         cd GiftcardSite/
         ls -lta
     - name: Build with Gradle
-      run: ~/.gradlew build
+      run: ./gradlew build
