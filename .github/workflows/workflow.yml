@@ -19,16 +19,16 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        cache: gradle
+        cache: gradlew
     - uses: actions/cache@v2
       with:
         path: |
-          ~/.gradle/caches
-          ~/.gradle/wrapper
+          ~/.gradlew/caches
+          ~/.gradlew/wrapper
           key: ${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/buildSrc/**/*.kt') }}
     - name: path
       run: |
         cd GiftcardSite/
         ls -lta
     - name: Build with Gradle
-      run: ./gradle build
+      run: ./gradlew build
